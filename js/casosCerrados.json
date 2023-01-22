@@ -1,0 +1,42 @@
+[
+    {
+        "IDReclamo": "OLD00123",
+        "sector": "OLDRecargas",
+        "solicitante": "Tom Ate",
+        "descripcion": "Recarga no impactada",
+        "resuelto": "true"
+    },
+    {
+        "IDReclamo": "OLD00124",
+        "sector": "OLDMedios de pagos",
+        "solicitante": "Tom Ate",
+        "descripcion": "Operación pendiente hace más de 2 semanas",
+        "resuelto": "true"
+    },
+
+    {
+        "IDReclamo": "OLD00125",
+        "sector": "OLDSUBE",
+        "solicitante": "Ross Geller",
+        "descripcion": "Todas las recargas salen con mensaje de error 215",
+        "resuelto": "true"
+    },
+
+    {
+        "IDReclamo": "OLD00126",
+        "sector": "OLDTransferencias",
+        "solicitante": "Rachel Green",
+        "descripcion": "La transferencia del PDV 45621 nunca impacto en destino",
+        "resuelto": "true"
+    },
+
+    {
+        "IDReclamo": "OLD00127",
+        "sector": "OLDRecargas",
+        "solicitante": "Barney Stinson",
+        "descripcion": "Error recarga duplicada",
+        "resuelto": "true"
+    }
+
+
+]

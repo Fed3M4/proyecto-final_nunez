@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- CSS propio-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--tostify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Reclamos</title>
+</head>
+<body>
+  <div class="bodyR">
+      <header class="d-flex justify-content-evenly animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg bg-#EA6523 w-100">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://www.codigopago.com/"><img src="https://www.codigopago.com/wp-content/uploads/2020/10/cp-logo.png" alt="Codigo Pago" class="cpLogo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="pages/contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Plataformas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://ventas.ynercia.com.ar/Gvp" target="_blank">Producción</a></li>
+                      <li><a class="dropdown-item" href="https://administracion.ynercia.com.ar/Gvp" target="_blank">Administración</a></li>
+                      <li><a class="dropdown-item" href="https://testing.ynercia.com.ar/Gvp" target="_blank">Testing</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/login.html"><button class="btn btn-outline-light me-2" type="button">Login</button></a>
+                  </li>
+                </ul>
+                <h1>¡Bienvenidos al acceso rápido!</h1>
+              </div>
+            </div>
+        </nav>
+      </header>
+    <main>
+      <div class="row g-5 d-flex justify-content-evenly">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">ÚLTIMO RECLAMO</span>
+             <span class="badge bg-primary rounded-pill" id="QReclamos">-</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">ID Reclamo:</h6>
+                <small class="text-muted">Número único</small>
+              </div>
+              <span class="text-muted" id="IDpintado">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Sector:</h6>
+                <small class="text-muted">Origen de reclamo</small>
+              </div>
+              <span class="text-muted" id="delSector">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Solicitante:</h6>
+              </div>
+              <span class="text-success" id="solicitante">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Descripción:</span>
+              <strong id="info">-</strong>
+            </li>
+          </ul>
+          <div id="casesClose">
+            <input class="w-50 btn btn-primary btn-lg d-flex justify-content-center" id="botonCasos" type="button" value="Casos cerrados">
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-6">
+          <h4 class="mb-3">Formulario de reclamos</h4>
+          <form class="needs-validation" id="form" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <label for="firstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  ingresá un nombre válido.
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <label for="lastName" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Ingresa un apellido válido.
+                </div>
+              </div>
+
+              <div class="form-group col-8">
+                <label for="section">Sector <span class="text-muted">(Origen)</span></label>
+                <select class="form-control" id="sector" value="" required>
+                  <option>Recargas</option>
+                  <option>SUBE</option>
+                  <option>Cobro de servicios</option>
+                  <option>Medios de pagos</option>
+                  <option>Transferencias</option>
+                  <option>Plataforma</option>
+                  <option>App</option>
+                </select>
+                <div class="invalid-feedback">
+                  Por favor ingresá un sector válido.
+                </div>
+              </div>
+
+              <div class="col-8">
+                <label for="amount" class="form-label">Nro. de operación</label>
+                <input type="number" maxlength="9" class="form-control" id="operation" placeholder="500000000" min="500000000" max="999999999" maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" >
+                <div class="invalid-feedback">
+                  Ingresa un monto válido.
+                </div>
+              </div>
+
+              <div class="col-8">
+                <label for="fees" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="descrip" placeholder="Un breve detalle..." required>
+                <div class="invalid-feedback">
+                  Por favor detallá lo sucedido.
+                </div>
+              </div>
+
+            <hr class="my-4">
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="save-info">
+              <label class="form-check-label" for="save-info">Guardar información para la próxima vez.</label>
+            </div>
+
+            <hr class="my-4">
+
+            <input class="w-50 btn btn-primary btn-lg d-flex justify-content-center" id="simulate" type="submit" value="Enviar Reclamo">
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class= "animate__animated animate__fadeInUp">
+      <ul class="mb-0">
+          <li>
+              <p>Creado y producido para uso interno en Código Pago para los sectores de OPERACIONES, SISTEMAS y RECLAMOS.</p>
+          </li>
+          <li class="logos">
+            <a href="https://www.facebook.com/profile.php?id=100063510433556" target="_blank"><img src="CSS/img/facebook.png" alt="cpFacebook" class="rrss"></a>
+            <a href="https://twitter.com/codigopago2020" target="_blank"><img src="CSS/img/twitter.png" alt="cpTwitter" class="rrss"></a>
+            <a href="https://www.instagram.com/codigopago2020/" target="_blank"><img src="CSS/img/instagram.png" alt="cpInsta" class="rrss"></a>
+            <a href="https://www.youtube.com/channel/UCXT7Nh7yQN-LgmMT-F7hYNg/featured" target="_blank"><img src="CSS/img/yt2.png" alt="cpYoutube" class="rrss"></a>
+          </li>
+      </ul>
+      <a href="https://api.whatsapp.com/send?phone=541164992046&text=%C2%A1Hola!%20Si%20tenes%20alguna%20consulta%20con%20respecto%20a%20la%20p%C3%A1gina%20por%20favor%20detalla%20la%20misma%20que%20a%20la%20brevedad%20te%20responder%C3%A9.%20%C2%A1Muchas%20gracias!" target="_blank"> <img src="CSS/img/600px-Whatsapp_logo_svg.png" alt="" class="wpp"></a>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/casosCerrados.json"></script>
+    <script src="js/reclamos.js"></script>
+    <script src="js/casos.json"></script>
+    <script src="js/validateForm.js"></script>
+    <script src="js/main.js"></script>
+
+  </div>
+
+</body>
+</html>

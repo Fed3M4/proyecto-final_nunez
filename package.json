@@ -1,0 +1,22 @@
+{
+  "name": "proyecto3-preentrega-nunez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fed3M4/proyecto3-preentrega-Nunez.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fed3M4/proyecto3-preentrega-Nunez/issues"
+  },
+  "homepage": "https://github.com/Fed3M4/proyecto3-preentrega-Nunez#readme",
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  }
+}
